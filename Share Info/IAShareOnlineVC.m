@@ -116,7 +116,7 @@ float marker;
     AskPermission = FALSE;
     
     [self.ElementsContainer.layer setCornerRadius:3.0];
-    alert = [[UIAlertView alloc] initWithTitle:@"" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    //alert = [[UIAlertView alloc] initWithTitle:@"" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
     
     
 }
@@ -167,7 +167,7 @@ float marker;
         {
             if (!AskPermission)
             {
-                [self ChangeAlertview:SendingTweet];
+                [self ChangeAlertview];//:SendingTweet];
             }
             [self TweetOnMyBehalf];
         }
@@ -175,7 +175,7 @@ float marker;
         {
             if (!AskPermission)
             {
-                [self ChangeAlertview:SendingPost];
+                [self ChangeAlertview];//:SendingPost];
             }
             [self Post_On_My_Wall];
         }
@@ -434,12 +434,12 @@ float marker;
         if (TweetStatus)
         {
             [self StopAlertview];
-            [self ChangeAlertview:TweetSuccess];
+            [self ChangeAlertview];//:TweetSuccess];
         }
         else
         {
             [self StopAlertview];
-            [self ChangeAlertview:TweetFailed];
+            [self ChangeAlertview];//:TweetFailed];
         }
         
         
@@ -450,7 +450,7 @@ float marker;
             if (FBFlag)
             {
                 [self StopAlertview];
-                [self ChangeAlertview:SendingPost];
+                [self ChangeAlertview];//:SendingPost];
                 [self Post_On_My_Wall];
             }
             else if (InstaFlag)
@@ -498,16 +498,21 @@ float marker;
 
 
 
--(void)ChangeAlertview:(NSString*)ChangedText
+-(void)ChangeAlertview//:(NSString*)ChangedText
 {
-    [alert setTitle:ChangedText];
-    [alert show];
+    [self.ShareButton setEnabled:NO];
+    [self.SharingIndicator setHidden:NO];
+    
+    //[alert setTitle:ChangedText];
+    //[alert show];
 }
 
 
 -(void)StopAlertview
 {
-    [alert dismissWithClickedButtonIndex:0 animated:YES];
+    [self.ShareButton setEnabled:YES];
+    [self.SharingIndicator setHidden:YES];
+    //[alert dismissWithClickedButtonIndex:0 animated:YES];
 }
 
 

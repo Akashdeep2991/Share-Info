@@ -30,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *CharLeft;
 @property (weak, nonatomic) IBOutlet UIView *SettingsContainer;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *SharingIndicator;
+
 
 //@property bool TweetFlag, FBFlag, InstaFlag, AskPermission;
 //@property bool TweetStatus, FBStatus;

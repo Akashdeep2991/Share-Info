@@ -99,6 +99,10 @@
                                             <action selector="ShareAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c8U-uZ-Vbi"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" id="vXz-3F-7yn">
+                                        <rect key="frame" x="147" y="340" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                     <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Say Something" textAlignment="center" minimumFontSize="17" id="H9U-ui-v50">
                                         <rect key="frame" x="5" y="281" width="270" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,6 +136,7 @@
                         <outlet property="ImagePickButton" destination="jvA-0M-MEk" id="0k3-zX-KzX"/>
                         <outlet property="SettingsContainer" destination="2jQ-01-w0h" id="dRL-f0-IAr"/>
                         <outlet property="ShareButton" destination="U8e-Ke-9sa" id="7pk-1O-k6E"/>
+                        <outlet property="SharingIndicator" destination="vXz-3F-7yn" id="q1C-wH-tbg"/>
                         <outlet property="cameraButton" destination="OFQ-2k-rf3" id="7RG-CP-xpk"/>
                         <outlet property="imagePreview" destination="Vdf-s9-bey" id="Gtv-LA-t5O"/>
                     </connections>
